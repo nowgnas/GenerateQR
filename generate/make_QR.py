@@ -10,6 +10,5 @@ for _iter in UserData.iterrows():
     UserName = _iter[1]['name']
     UserPhone = _iter[1]['phone']
     UserDataString = f'gen: {generation} name: {UserName} phone: {UserPhone}'
-
     QRGeneration = qrcode.make(UserDataString)
     QRGeneration.save(f'../data/qrImg/usr_qrCode/{UserName}.png')
